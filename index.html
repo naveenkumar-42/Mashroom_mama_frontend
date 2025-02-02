@@ -60,21 +60,18 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var modal = document.getElementById("contactModal");
-            var btn = document.querySelector(".contact-btn"); // Targeting CONTACT button by class
+            var btn = document.querySelector(".contact-btn");
             var span = document.querySelector(".close");
 
-            // Open the modal when CONTACT button is clicked
             btn.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent the default behavior of the link
+                event.preventDefault();
                 modal.style.display = "block";
             });
 
-            // Close the modal when the close button (X) is clicked
             span.addEventListener("click", function () {
                 modal.style.display = "none";
             });
 
-            // Close the modal if the user clicks outside of the modal content
             window.addEventListener("click", function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";

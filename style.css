@@ -152,22 +152,15 @@ header img {
     opacity: 0.9;
 }
 
-/* Modal styles */
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black background with transparency */
 }
 
 .modal-content {
@@ -175,14 +168,12 @@ header img {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 40%;
     border-radius: 10px;
 }
 
+
 .close {
-    padding: 5px 5px;
-    border-radius: 50px;
-    background-color: var(--accent-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -190,12 +181,11 @@ header img {
 
 .close:hover,
 .close:focus {
-    color: rgb(255, 255, 255);
+    color: var(--accent-color);
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Style for form elements inside modal */
 .modal-content input,
 .modal-content textarea {
     width: 100%;
