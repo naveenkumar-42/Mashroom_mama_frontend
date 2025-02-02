@@ -27,7 +27,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
-    background: var(--secondary-color);
+    background: var(--primary-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -40,13 +40,17 @@ header img {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    color: var(--primary-color);
+    color: #F2B52E;
     margin-left: 20px;
     transition: color 0.3s;
 }
 
 .nav-bar a:hover {
-    color: #000;
+    text-decoration: underline;
+}
+
+.nav-bar {
+    margin-right: 6%; 
 }
 
 .container {
@@ -195,6 +199,12 @@ header img {
     border: 1px solid #ccc;
 }
 
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
 .modal-content button {
     background-color: var(--primary-color);
     color: white;
@@ -210,9 +220,40 @@ header img {
 
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--primary-color);
     color: var(--text-color);
+}
+.footer-top{
+    display: inline-flex;
+    column-gap: 30px;
+}
+
+.footer-top p{
+    font-size: 20px;
+}
+
+/* .footer-top a{
+    text-decoration: none;
+} */
+.footer-top p {
+    font-size: 20px;
+}
+
+.footer-top p span {
+    margin: 0 10px; 
+}
+
+.footer-top a i {
+    margin: 0 5px; /* Adjust spacing as needed */
+}
+.footer p{
+    margin-top: 15px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #F2B52E;
 }
 
 @media (min-width: 768px) {
@@ -226,5 +267,4 @@ header img {
         width: 45%;
         margin-right: 20px;
     }
-
 }
