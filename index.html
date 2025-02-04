@@ -30,7 +30,7 @@
             <p>-Not For Franchiese</p>
             <div class="box">
                 <p>Order Now</p>
-                <a href="https://www.zomato.com/login">
+                <a href="https://www.zomato.com/chennai/mushroom-mama-potheri/order">
                     <button class="img-btn"></button>
                 </a>
                 <a href="https://www.swiggy.com/">
@@ -52,7 +52,29 @@
             </form>
         </div>
     </div>
-
+    <!--Counts banner-->
+    <div class="stats-wrapper">
+        <div class="stats-container">
+            <!-- <i class="fas fa-ring stats-icon"></i> -->
+            <span class="stats-number" data-val="1000">000</span>
+            <span class="stats-text">Happy Customers</span>
+        </div>
+        <div class="stats-container">
+            <!-- <i class="fas fa-smile-beam stats-icon"></i> -->
+            <span class="stats-number" data-val="800">000</span>
+            <span class="stats-text"></span>
+        </div>
+        <div class="stats-container">
+            <!-- <i class="fas fa-gem stats-icon"></i> -->
+            <span class="stats-number" data-val="200">000</span>
+            <span class="stats-text">Five Star Reviews</span>
+        </div>
+        <div class="stats-container">
+            <!-- <i class="fas fa-star stats-icon"></i> -->
+            <span class="stats-number" data-val="1200">000</span>
+            <span class="stats-text">Orders</span>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer-top">
             <p>
@@ -66,7 +88,8 @@
                 <a href="https://www.facebook.com/mushroommamaofficial">
                     <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
                 </a>
-                <a href="https://www.google.com/search?q=mushroom+mama+reviews&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAjIHCAIQIRiPAjIHCAMQIRiPAtIBCDg2MzVqMGo3qAIAsAIB&client=ms-android-vivo-rvo3&sourceid=chrome-mobile&ie=UTF-8&sei=BKWfZ87WMsXuseMPrPOHqQ8&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVUv0AFQyVe6ioU9h3wYhvyYyIGzhgoy1rnbF6ejjMDg2H7edEJhoaKonR4XohPXSOH0YZtkbOiorQmOjz27mqEDQw50&ictx=1&ved=2ahUKEwjp6pDeu6WLAxX6d2wGHdofFgYQrrQLegQIKxAA#ebo=0">
+                <a
+                    href="https://www.google.com/search?q=mushroom+mama+reviews&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRiPAjIHCAIQIRiPAjIHCAMQIRiPAtIBCDg2MzVqMGo3qAIAsAIB&client=ms-android-vivo-rvo3&sourceid=chrome-mobile&ie=UTF-8&sei=BKWfZ87WMsXuseMPrPOHqQ8&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVUv0AFQyVe6ioU9h3wYhvyYyIGzhgoy1rnbF6ejjMDg2H7edEJhoaKonR4XohPXSOH0YZtkbOiorQmOjz27mqEDQw50&ictx=1&ved=2ahUKEwjp6pDeu6WLAxX6d2wGHdofFgYQrrQLegQIKxAA#ebo=0">
                     <i class="fa-brands fa-google" style="color: #fcfcfc;"></i>
                 </a>
                 <a href="https://www.linkedin.com/company/mushroom-mama">
@@ -101,6 +124,29 @@
                     modal.style.display = "none";
                 }
             });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let counters = document.querySelectorAll(".stats-number");
+
+            counters.forEach((counter) => {
+                let start = 0;
+                let end = parseInt(counter.getAttribute("data-val")); // Get target value
+                let duration = Math.floor(2000 / end); // Adjust speed based on value
+                let increment = Math.ceil(end / 100); // Ensure smooth animation
+
+                let updateCounter = setInterval(() => {
+                    start += increment;
+                    if (start >= end) {
+                        start = end; // Ensure exact number
+                        clearInterval(updateCounter);
+                    }
+                    counter.textContent = start + "+"; // Add '+' next to the number
+                }, duration);
+            });
+            setTimeout(() => {
+                updateCounterValue(1, 1000); // Change second counter (index 1)
+            }, 5000);
         });
     </script>
 </body>
